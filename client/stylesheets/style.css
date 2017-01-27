@@ -1,6 +1,5 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html{
+  font-family: 'Inconsolata', monospace;
 }
 
 a {
@@ -10,4 +9,8 @@ a {
 img{
   height: 12em;
   width: 12em;
+}
+
+.brand-logo{
+  padding-left: 1em!important;
 }

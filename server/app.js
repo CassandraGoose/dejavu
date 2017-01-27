@@ -3,6 +3,7 @@ const path = require('path')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const index = require('./routes/index')
 const game = require('./routes/game')
@@ -13,6 +14,7 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '/../client')))   // <--- #1
+app.use(cors());
 
 // app.use('/api/v1', index)
 app.use('/game', game)

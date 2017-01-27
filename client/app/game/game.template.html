@@ -1,9 +1,10 @@
-<div class="container">
 
+
+<div class="container">
   <section>
     <div class="row">
    <div class="col s6 offset-s3">
-     <div class="card teal darken-1">
+     <div class="card green darken-1">
        <div class="card-content white-text">
          <span class="card-title">Instructions</span>
          <p>Enter your name and hit 'PLAY'. You will see images briefly flash on the screen. Your goal is test your memory on the images you have seen.</p>
@@ -18,17 +19,20 @@
 
     <form class="row">
             <input class="col s8 offset-s1" type="text" ng-model="$ctrl.name" placeholder="Name">
-            <a ng-click="$ctrl.startGame()" class="waves-effect waves-light btn col s2">Play</a>
+            <a ng-click="$ctrl.startGame()" class="green darken-2 waves-effect waves-light btn col s2">Play</a>
     </form>
 
     <section id="game-container">
-      <img src="{{$ctrl.ap}}" alt="">
+      <div class="row">
+        <img class="col s4 offset-s4" src="{{$ctrl.ap}}" alt="">
+      </div>
+
     </section>
     <div class="row">
-      <div ng-click="$ctrl.loseGame()" ng-bind-html="$ctrl.qp1" class="col s6">
+      <div class="col s4 offset-s2" ng-click="$ctrl.loseGame()" ng-bind-html="$ctrl.qp1" class="col s6">
 
       </div>
-      <div ng-click="$ctrl.winGame()" ng-bind-html="$ctrl.qp2" class="col s6">
+      <div class="col s4 offset-s1" ng-click="$ctrl.winGame()" ng-bind-html="$ctrl.qp2" class="col s6">
 
       </div>
     </div>

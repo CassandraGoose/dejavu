@@ -17,6 +17,7 @@
         url: '/',
         template: `
         <game-component></game-component>
+        <score-component></score-component> 
         `
       });
 
