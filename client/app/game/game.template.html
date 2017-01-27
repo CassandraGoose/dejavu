@@ -18,8 +18,20 @@
 
     <form class="row">
             <input class="col s8 offset-s1" type="text" ng-model="$ctrl.name" placeholder="Name">
-            <a class="waves-effect waves-light btn col s2">Play</a>
+            <a ng-click="$ctrl.startGame()" class="waves-effect waves-light btn col s2">Play</a>
     </form>
+
+    <section id="game-container">
+      <img src="{{$ctrl.ap}}" alt="">
+    </section>
+    <div class="row">
+      <div ng-click="$ctrl.loseGame()" ng-bind-html="$ctrl.qp1" class="col s6">
+
+      </div>
+      <div ng-click="$ctrl.winGame()" ng-bind-html="$ctrl.qp2" class="col s6">
+
+      </div>
+    </div>
 
 
 </div>
